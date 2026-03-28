@@ -1,7 +1,8 @@
-#!/usr/bin/env bash
-# Script 2: FOSS Package Inspector (FIXED - macOS compatible)
+#!/bin/bash
+# Script 2: FOSS Package Inspector
+# Author: Udayraj Patil
 
-PACKAGE=${1:-"git"}
+PACKAGE=${1:-"git"}   # Default package
 
 echo "=========================================="
 echo "        FOSS Package Inspector            "
@@ -9,64 +10,51 @@ echo "=========================================="
 echo "Checking package: $PACKAGE"
 echo "------------------------------------------"
 
-# Proper cross-platform check (NOT only brew)
-if command -v "$PACKAGE" >/dev/null 2>&1; then
-    echo "[SUCCESS] $PACKAGE is installed."
-    echo ""
-    echo "--- Package Details ---"
+# Check if system uses RPM
+if command -v rpm >/dev/null 2>&1; then
 
-    # Try brew info if installed via Homebrew
-    if command -v brew >/dev/null 2>&1 && brew list "$PACKAGE" &>/dev/null; then
-        brew info "$PACKAGE" | grep -E "stable|HEAD|license" | head -5
+    if rpm -q "$PACKAGE" >/dev/null 2>&1; then
+        echo "$PACKAGE is installed."
+        rpm -qi "$PACKAGE" | grep -E "Version|License|Summary"
+    else
+        echo "$PACKAGE is NOT installed."
     fi
 
-    # Get version safely
-    VERSION=$("$PACKAGE" --version 2>/dev/null | head -1)
-    [ -n "$VERSION" ] && echo "Version    : $VERSION"
+# Check if system uses DPKG
+elif command -v dpkg >/dev/null 2>&1; then
 
-    # Better than which
-    echo "Location   : $(command -v "$PACKAGE")"
-    echo "-----------------------"
+    if dpkg -l | grep -w "$PACKAGE" >/dev/null 2>&1; then
+        echo "$PACKAGE is installed."
+        dpkg -l | grep -w "$PACKAGE"
+    else
+        echo "$PACKAGE is NOT installed."
+    fi
 
 else
-    echo "[WARNING] $PACKAGE is NOT installed."
-    echo "Install it with: brew install $PACKAGE"
-    echo ""
-    # Debian/Ubuntu : sudo apt install $PACKAGE
-    # Fedora/RHEL   : sudo dnf install $PACKAGE
+    echo "No supported package manager found."
 fi
 
-echo ""
-echo "--- Open Source Philosophy Note ---"
+echo "------------------------------------------"
 
+# Case statement (Philosophy Note)
 case $PACKAGE in
     httpd|apache2)
-        echo "Apache: The web server that built the open internet,"
-        echo "proving decentralised hosting works at global scale."
+        echo "Apache: the web server that built the open internet."
         ;;
     mysql)
-        echo "MySQL: Open source at the heart of millions of apps,"
-        echo "a lesson in dual-licensing done right."
+        echo "MySQL: open source at the heart of millions of applications."
         ;;
     git)
-        echo "Git: Linus Torvalds' solution to proprietary failure —"
-        echo "built in 10 days, now used by millions worldwide."
+        echo "Git: a distributed version control system for collaboration."
         ;;
     vlc)
-        echo "VLC: The traffic cone that plays anything, built by"
-        echo "Paris students defying digital borders."
+        echo "VLC: a free media player that supports almost all formats."
         ;;
     firefox)
-        echo "Firefox: A nonprofit's fight to keep the web open"
-        echo "and user-centric against corporate browser dominance."
-        ;;
-    python3|python)
-        echo "Python: Shaped entirely by community consensus —"
-        echo "the PSF license ensures it stays free for everyone."
+        echo "Firefox: an open-source browser focused on privacy."
         ;;
     *)
-        echo "$PACKAGE: Another brick in the vast collaborative"
-        echo "wall of free and open source software."
+        echo "$PACKAGE: part of the open-source ecosystem."
         ;;
 esac
 
