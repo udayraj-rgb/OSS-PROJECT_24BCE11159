@@ -1,45 +1,38 @@
 #!/bin/bash
 # Script 1: System Identity Report
-# Author: UDAYRAJ PATIL
-# Registration: 24BCE11159
-# Course: Open Source Software
-# Description: Generates a welcome screen detailing the system identity.
+# Author: Udayraj Patil | Course: Open Source Software
 
 # --- Variables ---
 STUDENT_NAME="Udayraj Patil"
 SOFTWARE_CHOICE="Git"
 
-# System info using command substitution $()
+# --- System info ---
 KERNEL=$(uname -r)
 USER_NAME=$(whoami)
-HOST_NAME=$(hostname)
+HOME_DIR=$HOME
 
-# macOS uses 'sw_vers' instead of /etc/os-release
-DISTRO=$(sw_vers -productName)
-OS_VERSION=$(sw_vers -productVersion)
+# Linux distribution name
+DISTRO=$(grep "^NAME=" /etc/os-release | cut -d= -f2 | tr -d '"')
 
-# macOS uptime needs different parsing than Linux
-UPTIME=$(uptime | awk -F'up ' '{print $2}' | awk -F',' '{print $1}' | xargs)
+# System uptime
+UPTIME=$(uptime -p)
 
-CURRENT_DATE=$(date "+%A, %d %B %Y %T")
+# Current date and time
+CURRENT_DATE=$(date)
 
 # --- Display ---
-echo "=========================================="
-echo "         The Open Source Audit            "
-echo "=========================================="
-echo "Student    : $STUDENT_NAME"
+echo "================================"
+echo " Open Source Audit — $STUDENT_NAME"
+echo "================================"
 echo "Software   : $SOFTWARE_CHOICE"
-echo "------------------------------------------"
-echo "OS         : $DISTRO $OS_VERSION"
+echo "--------------------------------"
+echo "OS         : $DISTRO"
 echo "Kernel     : $KERNEL"
-echo "Hostname   : $HOST_NAME"
 echo "User       : $USER_NAME"
-echo "Home Dir   : $HOME"
+echo "Home Dir   : $HOME_DIR"
 echo "Uptime     : $UPTIME"
 echo "Date/Time  : $CURRENT_DATE"
-echo "------------------------------------------"
-echo "OS License : macOS is built on BSD Unix"
-echo "             (Apple Public Source License)"
-echo "Git License: GNU General Public License v2"
-echo "             Same license as the Linux kernel"
-echo "=========================================="
+echo "--------------------------------"
+echo "OS License : Linux is licensed under"
+echo "             GNU General Public License (GPL)"
+echo "================================"
