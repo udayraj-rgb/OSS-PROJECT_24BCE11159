@@ -1,4 +1,4 @@
-# OSS Capstone Project: The Open Source Audit
+# OSS Project: The Open Source Audit
 
 **Name:** Udayraj Patil 
 **Reg No:** 24BCE11159
