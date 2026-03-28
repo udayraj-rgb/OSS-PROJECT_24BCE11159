@@ -1,9 +1,13 @@
 # OSS Project: The Open Source Audit
 
 **Name:** Udayraj Patil 
-**Reg No:** 24BCE11159
+
+**Registration No:** 24BCE11159
+
 **Slot:** A24
+
 **Course:** Open Source Software  
+
 **College:** VIT Bhopal University 
 
 ---
