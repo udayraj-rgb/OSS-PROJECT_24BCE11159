@@ -26,11 +26,11 @@ I have selected Git since I already use it in my life and I wanted to learn more
 
 | File | What It Does |
 |------|-------------|
-| `SystemIdentityReport.sh` | Displays information about the kernel, user, and uptime of system |
-| `FOSSPackageInspector.sh` | Report Answers the question whether a package is installed correctly and provides the information |
-| `PermissionAuditor.sh` | Designates grants and sizes of key directories |
-| `LogFile.sh` | Determines the number of times that a heyword is repeated in a log file |
-| `Manifesto.sh` | Prompts you to answer 3 easy questions and comes up with your open source statement |
+| `Script_1_System_Identity_Report.sh` | Displays information about the kernel, user, and uptime of system |
+| `Script_2_FOSS_Package_Inspector.sh` | Report Answers the question whether a package is installed correctly and provides the information |
+| `Script_3_Permission_Auditor.sh` | Designates grants and sizes of key directories |
+| `Script_3_Permission_Auditor.sh` | Determines the number of times that a heyword is repeated in a log file |
+| `Script_5_Manifesto.sh` | Prompts you to answer 3 easy questions and comes up with your open source statement |
 
 ---
 
@@ -38,23 +38,23 @@ I have selected Git since I already use it in my life and I wanted to learn more
 
 First make them executable:
 ```bash
-chmod +x SystemIdentityReport.sh
-chmod +x FOSSPackageInspector.sh
-chmod +x PermissionAuditor.sh
-chmod +x LogFile.sh
-chmod +x Manifesto.sh
+chmod +x Script_1_System_Identity_Report.sh
+chmod +x Script_2_FOSS_Package_Inspector.sh
+chmod +x Script_3_Permission_Auditor.sh
+chmod +x Script_4_Log_File.sh
+chmod +x Script_5_Manifesto.sh
 ```
 
 **Script 1**
 ```bash
-./SystemIdentityReport.sh
+./Script_1_System_Identity_Report.sh
 ```
 Displays a welcome page with your OS, kernel version, your username, time up and license details of Git.
 
 **Script 2**
 ```bash
-./FOSSPackageInspector.sh
-./FOSSPackageInspector.sh git
+./Script_2_FOSS_Package_Inspector.sh
+./Script_2_FOSS_Package_Inspector.sh git
 ```
 Any package name may be passed or can be left blank which default to git.  
 Indicates whether or not it is in place, and version and whereabouts with a philosophy note.
@@ -62,7 +62,7 @@ Indicates whether or not it is in place, and version and whereabouts with a phil
 
 **Script 3**
 ```bash
-./PermissionAuditor.sh
+./Script_3_Permission_Auditor.sh
 ```
 Browses in directories, such as /etc, /var/log, /usr/bin and displays the owner and size of them.  
 Also checks for .gitconfig.
@@ -70,8 +70,8 @@ Also checks for .gitconfig.
 
 **Script 4**
 ```bash
-./LogFile.sh
-./LogFile.sh /var/log/system.log error
+./Script_4_Log_File.sh
+./Script_4_Log_File.sh /var/log/system.log error
 ```
 Processes a line of a log file and counts the number of matches of the key word.   
 Sees the previous 5 lines which there are a replica.
@@ -79,7 +79,7 @@ Sees the previous 5 lines which there are a replica.
 
 **Script 5**
 ```bash
-./Manifesto.sh
+./Script_5_Manifesto.sh
 ```
 Goes through the 3 questions and personal open source manifesto using interactive question and answer.  
 Also stores your personal open source manifesto as a personal file.
