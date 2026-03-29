@@ -1,10 +1,14 @@
 # OSS Capstone Project: The Open Source Audit
 
 **Name:** Udayraj Patil 
+
 **Reg No:** 24BCE11159
+
 **Slot:** A24
-**Course:** Open Source Software  
-**College:** VIT Bhopal University 
+
+**Course:** OPEN SOURCE SOFTWARE (LINUX ADMINISTRATION) (CSE0002)
+
+**College:** VIT BHOPAL UNIVERSITY
 
 ---
 
@@ -14,7 +18,7 @@
 - License: GPL v2
 - Made by Linus Torvalds in 2005
 
-I have selected Git since I already use it in my life and I wanted to learn more about it, not only the syntax but also the origin and the way it functions as it does.
+I chose Git because it’s something I already use regularly in my workflow, and I wanted to go beyond just memorizing commands. I was genuinely curious about how it all started, why it was created by Linus Torvalds in 2005, and what makes it work so efficiently behind the scenes. Exploring Git from this deeper perspective helped me appreciate not just its functionality, but also the design decisions and ideas that make it such a powerful version control system today.
 
 ---
 
