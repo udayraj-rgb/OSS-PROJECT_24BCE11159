@@ -93,6 +93,13 @@ Also stores your personal open source manifesto as a personal file.
 - Bash shell (comes pre-installed)
 
 ---
+## Conclusion
+
+This project helped me understand the role of Git in the open-source ecosystem and how it seamlessly integrates with Linux-based environments. By working with Git, I was able to explore how version control systems manage changes, enable collaboration, and maintain project history efficiently.
+
+In addition to that, writing shell scripts gave me valuable hands-on experience with system-level operations and automation. It improved my understanding of how tasks can be streamlined, repeated processes can be simplified, and system information can be managed effectively.
+
+Overall, this project not only strengthened my practical skills but also gave me a deeper appreciation of how tools like Git and Linux work together to support modern software development and open-source collaboration.
 
 ## References
 
