@@ -29,7 +29,7 @@ I chose Git because it’s something I already use regularly in my workflow, and
 | `Script_1_System_Identity_Report.sh` | Displays information about the kernel, user, and uptime of system |
 | `Script_2_FOSS_Package_Inspector.sh` | Report Answers the question whether a package is installed correctly and provides the information |
 | `Script_3_Permission_Auditor.sh` | Designates grants and sizes of key directories |
-| `Script_4_Log_File.sh` | Determines the number of times that a heyword is repeated in a log file |
+| `Script_4_Log_File.sh` | Determines the number of times that a keyword is repeated in a log file |
 | `Script_5_Manifesto.sh` | Prompts you to answer 3 easy questions and comes up with your open source statement |
 
 ---
