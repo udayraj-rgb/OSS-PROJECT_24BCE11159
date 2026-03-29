@@ -1,49 +1,45 @@
-# OSS Project: The Open Source Audit
+# OSS Capstone Project: The Open Source Audit
 
-**Name:** Udayraj Patil  
-**Registration No:** 24BCE11159  
-**Slot:** A24  
+**Name:** Udayraj Patil 
+**Reg No:** 24BCE11159
+**Slot:** A24
 **Course:** Open Source Software  
-**College:** VIT Bhopal University  
+**College:** VIT Bhopal University 
 
 ---
 
-## About the Project
+## Software I Choose
+**Git**
+- Category: Version Control
+- License: GPL v2
+- Made by Linus Torvalds in 2005
 
-For this project, I chose **Git**, a widely used version control system that I already use in my daily workflow. My goal was not just to practice commands, but to understand:
-
-- How Git was created  
-- Why it works the way it does  
-- The philosophy behind open source development  
-
-Git was created by **Linus Torvalds in 2005** and is released under the **GPL v2 license**.
+I have selected Git since I already use it in my life and I wanted to learn more about it, not only the syntax but also the origin and the way it functions as it does.
 
 ---
 
-## What’s Inside This Repository
+## What's In This Repo
 
-This project consists of several Bash scripts, each designed to explore a different aspect of system auditing and open-source concepts:
-
-| File | Description |
-|------|------------|
-| Script_1_System_Identity_Report.sh | Displays system details like kernel version, username, uptime, and Git license info |
-| Script_2_FOSS_Package_Inspector.sh | Checks if a package is installed and shows version, location, and a short philosophy note |
-| Script_3_Permission_Auditor.sh | Audits important directories and displays ownership and size details |
-| Script_4_Log_File.sh | Searches log files for keywords and shows occurrences with context |
-| Script_5_Manifesto.sh | Generates a personalized open-source manifesto based on user input |
+| File | What It Does |
+|------|-------------|
+| `Script_1_System_Identity_Report.sh` | Displays information about the kernel, user, and uptime of system |
+| `Script_2_FOSS_Package_Inspector.sh` | Report Answers the question whether a package is installed correctly and provides the information |
+| `Script_3_Permission_Auditor.sh` | Designates grants and sizes of key directories |
+| `Script_4_Log_File.sh` | Determines the number of times that a heyword is repeated in a log file |
+| `Script_5_Manifesto.sh` | Prompts you to answer 3 easy questions and comes up with your open source statement |
 
 ---
 
 ## How to Run the Scripts
 
-### Step 1: Make Scripts Executable
-
+First make them executable:
 ```bash
 chmod +x Script_1_System_Identity_Report.sh
 chmod +x Script_2_FOSS_Package_Inspector.sh
 chmod +x Script_3_Permission_Auditor.sh
 chmod +x Script_4_Log_File.sh
 chmod +x Script_5_Manifesto.sh
+```
 
 **Script 1**
 ```bash
@@ -103,3 +99,5 @@ Also stores your personal open source manifesto as a personal file.
 - survey.stackoverflow.co/2023
 - spdx.org/licenses/GPL-2.0-only.html
 - github.com/git/git
+
+
